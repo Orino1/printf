@@ -60,6 +60,11 @@ int _printf(const char *format, ...)
 					result += _putnums(va_arg(args, int),result);
 					i++;
 				}
+				else if (format[i + 1] == 'i')
+                                {
+                                        result += _putnums(va_arg(args, int),result);
+                                        i++;
+                                }
 			}
 		}
 		else if (format[i] != '%')
