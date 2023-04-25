@@ -65,6 +65,11 @@ int _printf(const char *format, ...)
                                         result += _putnums(va_arg(args, int),result);
                                         i++;
                                 }
+				else if (format[i + 1] == '%')
+                                {
+                                        _putchar('%');
+                                        i++;
+                                }
 			}
 		}
 		else if (format[i] != '%')
