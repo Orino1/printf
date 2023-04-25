@@ -70,6 +70,12 @@ int _printf(const char *format, ...)
                                         _putchar('%');
                                         i++;
                                 }
+				else if (format[i + 1] == 'r')
+                                {
+                                        _putchar('%');
+					_putchar('r');
+                                        i++;
+                                }
 			}
 		}
 		else if (format[i] != '%')
